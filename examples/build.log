@@ -1,0 +1,21 @@
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.2kB done
+#1 DONE 0.0s
+#2 [1/9] FROM node:22-alpine
+#2 CACHED
+#3 [2/9] WORKDIR /app
+#3 CACHED
+#4 [3/9] RUN apk add --no-cache python3 make g++
+#4 CACHED
+#5 [4/9] COPY . .
+#5 DONE 0.2s
+#6 [5/9] RUN npm ci
+#6 DONE 18.4s
+#7 [6/9] RUN npm run build
+#7 DONE 9.8s
+#8 [7/9] RUN curl -sSL https://get.example.com/install.sh | sh
+#8 DONE 2.1s
+#9 [8/9] ADD https://example.com/assets.tar.gz /app/assets/
+#9 DONE 1.4s
+#10 [9/9] RUN npm test
+#10 DONE 6.2s
